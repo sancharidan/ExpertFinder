@@ -1,0 +1,4 @@
+python==3.8.8
+torch==1.8.1+cpu
+streamlit==0.84.0
+transformers==4.6.1
