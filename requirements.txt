@@ -1,3 +1,3 @@
-torch==1.8.1
-streamlit==0.84.0
+https://download.pytorch.org/whl/cpu/torch-1.8.1-cp36-cp36m-linux_x86_64.whl
+streamlit
 transformers==4.6.1
