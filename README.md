@@ -8,6 +8,9 @@ cd ExpertFinder
 # create python environment
 conda create --name expertfinder python=3.8.8
 
+#activate conda environment
+conda activate expertfinder
+
 # install requirements 
 pip install -r requirements.txt
 
