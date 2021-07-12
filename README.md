@@ -17,4 +17,4 @@ streamlit run app.py
 
 Navigate to ```http://localhost:8501``` to find the Streamlit App as below
 
-![plot](ExpertFinder Streamlit.PNG)
+![plot](https://github.com/sancharidan/ExpertFinder/blob/a806407f371128185b1027cdec77ee553cd23efd/ExpertFinder%20Streamlit.PNG)
