@@ -96,7 +96,7 @@ def get_predictions(sequences, batch_size):
     predictions = predictions.detach().cpu().numpy()
     return predictions 
     
-def get_experts(expertise_area, expert_db, num_experts = 10):
+def get_experts(expertise_area, expert_db, num_experts = 50):
   print('\nGetting experts for ',expertise_area)
   experts = expert_db['Name'].unique()
   l = [[]]

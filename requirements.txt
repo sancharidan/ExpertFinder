@@ -3,3 +3,4 @@ torch==1.8.1+cpu
 torchvision==0.9.1+cpu
 streamlit==0.84.0
 transformers==4.6.1
+gdown
