@@ -17,7 +17,7 @@ output = './Model/model.zip'
 def download_model():
      files = [file for file in os.listdir('./Model/') if str(file)!='tmp.txt']
      if len(files) > 0:
-          with st.spinner("Using cached model... " + str(files[0]))):
+          with st.spinner("Using cached model... " + str(files[0])):
                time.sleep(3)
                return
      else:
