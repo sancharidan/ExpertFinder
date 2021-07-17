@@ -15,8 +15,8 @@ url = "https://drive.google.com/uc?export=download&id=1mXlgM-gEswtMBIJE6aC9hewDe
 output = './Model/model.zip'
 @st.cache
 def download_model():
-     files = [file for file in os.listdir('./Model/') if str(file)!='tmp.txt']
-     if len(files) > 0:
+     files = [file for file in os.listdir('./Model/')]
+     if 'scibert_6_epochs_3105_pub_yes_distinctsegid_yes_entvocab_no' in files:
           with st.spinner("Using cached model... " + str(files[0])):
                time.sleep(3)
                return
