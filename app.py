@@ -5,27 +5,27 @@ from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler,
 import numpy as np
 import pandas as pd
 
-from transformers import BertTokenizer,BertForSequenceClassification
+# from transformers import BertTokenizer,BertForSequenceClassification
 import os
-import gdown
-import zipfile
 import time
 
-url = "https://drive.google.com/uc?export=download&id=1mXlgM-gEswtMBIJE6aC9hewDek446HEK"
-output = './Model/model.zip'
-@st.cache
-def download_model():
-     files = [file for file in os.listdir('./Model/')]
-     if 'scibert_6_epochs_3105_pub_yes_distinctsegid_yes_entvocab_no' in files:
-          with st.spinner("Using cached model... " + str(files[0])):
-               time.sleep(3)
-               return
-     else:
-          with st.spinner("Downloading model... this may take awhile! \n Don't stop it!"):          
-               gdown.download(url, output, quiet=False)
-          with zipfile.ZipFile(output, 'r') as zip_ref:
-               zip_ref.extractall('./Model/')
-          os.remove(output)
+import retrieve_experts
+
+# url = "https://drive.google.com/uc?export=download&id=1mXlgM-gEswtMBIJE6aC9hewDek446HEK"
+# output = './Model/model.zip'
+# @st.cache
+# def download_model():
+#      files = [file for file in os.listdir('./Model/')]
+#      if 'scibert_6_epochs_3105_pub_yes_distinctsegid_yes_entvocab_no' in files:
+#           with st.spinner("Using cached model... " + str(files[0])):
+#                time.sleep(3)
+#                return
+#      else:
+#           with st.spinner("Downloading model... this may take awhile! \n Don't stop it!"):          
+#                gdown.download(url, output, quiet=False)
+#           with zipfile.ZipFile(output, 'r') as zip_ref:
+#                zip_ref.extractall('./Model/')
+#           os.remove(output)
 
 
 # @st.cache
@@ -54,8 +54,7 @@ def download_model():
 #         print("Model 2 is here.")
 
 # App title
-download_model()
-import retrieve_experts
+# download_model()
 
 st.title("SMU Expert Finder")
 query = st.text_input("Please enter research area for which you seek experts", key="topic_textbox")
