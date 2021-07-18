@@ -10,7 +10,7 @@ import os
 import argparse
 ###-----Parameters - input from user----###
 parser = argparse.ArgumentParser()
-parser.add_argument('--MODEL_PATH', default = './Model/scibert_6_epochs_3105_pub_yes_distinctsegid_yes_entvocab_no', help = 'Specify path to model directory')
+parser.add_argument('--MODEL_PATH', default = 'sancharidan/scibet_expertfinder', help = 'Specify path to model directory')
 parser.add_argument('--EXPERT_SCHOOL',  default = "SCIS", help = 'Choose between SCIS, Business and All. Default Value = SCIS')
 parser.add_argument('--NUM_EXPERTS',  type = int, default = 10, help = 'Specify number of experts to be returned')
 parser.add_argument('--QUERY', default = 'Artificial Intelligence', help = 'Query Research Area for which to find experts')
